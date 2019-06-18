@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>oguzhankahyaoglu</Authors>
+        <Description>For Log4Net logging, SeqAppender wrapper for .netcore applications. Default SeqAppender only supports .net framework.</Description>
+        <PackageProjectUrl>https://github.com/oguzhankahyaoglu/SeqAppender.Log4net.Core</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/oguzhankahyaoglu/SeqAppender.Log4net.Core</RepositoryUrl>
+        <PackageTags>log4net seqappender seq</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="log4net" Version="2.0.8" />
+      <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="1.1.0" />
+    </ItemGroup>
+
+</Project>
