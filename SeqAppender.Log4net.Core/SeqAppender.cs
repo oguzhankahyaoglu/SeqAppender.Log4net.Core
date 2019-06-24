@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Text;
 using log4net.Appender;
 using log4net.Core;
@@ -15,12 +16,10 @@ namespace SeqAppender.Log4net.Core
     /// </summary>
     public class SeqAppender : BufferingAppenderSkeleton
     {
-        private readonly IHostingEnvironment _environment;
         private readonly HttpClient _httpClient = new HttpClient();
 
-        public SeqAppender(IHostingEnvironment environment)
+        public SeqAppender()
         {
-            _environment = environment;
         }
         
 
@@ -89,7 +88,7 @@ namespace SeqAppender.Log4net.Core
             
             foreach (var e in events)
             {
-                e.Properties["Environment"] = _environment.EnvironmentName;
+                e.Properties["Environment"] = SeqAppenderExtensions.EnvironmentName;
             }
 
             var payload = new StringWriter();

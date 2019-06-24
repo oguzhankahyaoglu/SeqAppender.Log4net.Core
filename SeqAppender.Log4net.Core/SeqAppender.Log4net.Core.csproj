@@ -8,6 +8,7 @@
         <PackageProjectUrl>https://github.com/oguzhankahyaoglu/SeqAppender.Log4net.Core</PackageProjectUrl>
         <RepositoryUrl>https://github.com/oguzhankahyaoglu/SeqAppender.Log4net.Core</RepositoryUrl>
         <PackageTags>log4net seqappender seq</PackageTags>
+        <PackageVersion>1.1.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
